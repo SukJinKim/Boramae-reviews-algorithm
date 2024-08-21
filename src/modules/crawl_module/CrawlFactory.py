@@ -12,4 +12,4 @@ class CrawlFactory:
         elif domain == 'algospot.com':
             return CrawlAlgospot(url)
         else:
-            raise ValueError("Unsupported URL")
+            raise ValueError("ERR_UNSUPPORTED_URL : 지원하는 사이트의 URL이 아닙니다.")
