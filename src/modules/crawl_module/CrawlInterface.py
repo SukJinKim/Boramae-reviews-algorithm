@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Crawl(ABC):
+class CrawlInterface(ABC):
     def __init__(self, url):
         self.url = url
 

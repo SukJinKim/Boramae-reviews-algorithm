@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-from .Crawl import Crawl
+from .CrawlInterface import CrawlInterface
 
-class CrawlAlgospot(Crawl):
+class CrawlAlgospot(CrawlInterface):
     def get_problem(self):
         response = requests.get(self.url)
 
