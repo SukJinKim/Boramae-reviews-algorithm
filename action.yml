@@ -1,0 +1,42 @@
+name : Boramae reviews algorithm
+description: #TODO
+author: 'SukJinKim, GyeongChanP'
+
+inputs:
+  github_token:
+    required: true
+  model_company:
+    required: true
+  few_shot_learning:
+    required: false
+    default: 'false'
+  api_key:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+    
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install PyGithub
+        pip install beautifulsoup4      
+        pip install openai
+        pip install anthropic
+      shell: bash
+
+    - name: Run python script
+      env:
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        MODEL_COMPANY: ${{ inputs.model_company }}
+        FEW_SHOT_LEARNING : ${{ inputs.few_shot_learning }}
+        API_KEY: ${{ inputs.api_key }}
+        REPOSITORY: ${{ github.repository }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+      run: python ./src/main.py
+      shell: bash
