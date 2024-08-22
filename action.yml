@@ -1,6 +1,10 @@
 name : Boramae reviews algorithm
-description: #TODO
+description: 'Review the code submitted to the coding problem and propose an optimized code.'
 author: 'SukJinKim, GyeongChanP'
+# Ref: https://haya14busa.github.io/github-action-brandings/
+branding:
+  icon: 'git-pull-request'
+  color: 'blue'
 
 inputs:
   github_token:
