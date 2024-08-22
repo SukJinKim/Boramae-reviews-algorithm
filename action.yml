@@ -42,5 +42,5 @@ runs:
         API_KEY: ${{ inputs.api_key }}
         REPOSITORY: ${{ github.repository }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
-      run: python ./src/main.py
+      run: python3 ${{ github.action_path }}/src/main.py
       shell: bash
