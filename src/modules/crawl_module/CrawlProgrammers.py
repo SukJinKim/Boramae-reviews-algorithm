@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from .CrawlInterface import CrawlInterface
 
 class CrawlProgrammers(CrawlInterface):
-    def get_problem(self):
+    def get_problem_description(self):
         response = requests.get(self.url)
 
         if response.status_code != 200:

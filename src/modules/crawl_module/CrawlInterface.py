@@ -5,5 +5,5 @@ class CrawlInterface(ABC):
         self.url = url
 
     @abstractmethod
-    def get_problem(self):
+    def get_problem_description(self):
         pass
