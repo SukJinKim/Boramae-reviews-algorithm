@@ -9,5 +9,5 @@ class QueryInterface(ABC):
         pass
 
     @abstractmethod
-    def optimize_after_review(self, submitted_code, problem_components, few_shot_learning):
+    def optimize_after_review(self, submitted_code, problem_components, few_shot_learning, root_path):
         pass

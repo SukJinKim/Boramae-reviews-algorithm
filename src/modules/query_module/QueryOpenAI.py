@@ -57,11 +57,11 @@ class QueryOpenAI(QueryInterface):
                              details : {e}
                              """)
     
-    def optimize_after_review(self, submitted_code, problem_components, few_shot_learning):
+    def optimize_after_review(self, submitted_code, problem_components, few_shot_learning, root_path):
 
-        with open("src/modules/query_module/prompts/prompt_template.txt", "r") as f:
+        with open(f"{root_path}/src/modules/query_module/prompts/prompt_template.txt", "r") as f:
             prompt_template = f.read()
-        with open("src/modules/query_module/prompts/few_shot_learning_prompt.txt", "r") as f:
+        with open(f"{root_path}/src/modules/query_module/prompts/few_shot_learning_prompt.txt", "r") as f:
             few_shot_learning_prompt = f.read()
         
         prompt = prompt_template.replace("{CODE}", submitted_code)\

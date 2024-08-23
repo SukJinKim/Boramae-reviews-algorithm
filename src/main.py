@@ -12,6 +12,7 @@ FEW_SHOT_LEARNING = (os.getenv('FEW_SHOT_LEARNING').lower() == 'true')
 API_KEY = os.getenv('API_KEY')
 REPOSITORY = os.getenv('REPOSITORY')
 PR_NUMBER = int(os.getenv('PR_NUMBER'))
+ROOT_PATH = os.getenv('ROOT_PATH', '')
 
 # Initialize GitHub API
 G = Github(GITHUB_TOKEN)
@@ -63,7 +64,7 @@ def main():
 
     # Get review from query
     query = QueryFactory.create_query(MOEL_COMPANY, API_KEY)
-    review = query.optimize_after_review(submitted_code, problem_components, FEW_SHOT_LEARNING)
+    review = query.optimize_after_review(submitted_code, problem_components, FEW_SHOT_LEARNING, ROOT_PATH)
 
     # Post review comment
     PR.create_issue_comment(review)
