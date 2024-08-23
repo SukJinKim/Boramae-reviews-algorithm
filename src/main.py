@@ -36,7 +36,7 @@ def get_url_from_commit_message(pr):
 
     return urls[0]
 
-def get_submitted_code(pr):
+def get_submitted_code(repo, pr):
     submitted_codes = []
     commits = pr.get_commits()
     latest_commit = list(commits)[-1]
@@ -49,13 +49,16 @@ def get_submitted_code(pr):
         raise ValueError('ERR_SUBMITTED_CODES: 제출한 코드가 없습니다.')
     elif len(submitted_codes) > 1:
         raise ValueError('ERR_SUBMITTED_CODES: 제출한 코드가 2개 이상입니다.')
+
+    submitted_code = repo.get_contents(submitted_codes[0].filename, ref=pr.head.sha)
+    submitted_code = submitted_code.decoded_content.decode('utf-8')
     
-    return submitted_codes[0]
+    return submitted_code
 
 @post_error_comment(pr=PR)
 def main():
     # Get submitted code
-    submitted_code = get_submitted_code(PR)
+    submitted_code = get_submitted_code(REPO, PR)
 
     # Get problem_components from crawler
     url = get_url_from_commit_message(PR)
