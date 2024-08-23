@@ -60,13 +60,14 @@ def main():
     # Get submitted code
     submitted_code = get_submitted_code(REPO, PR)
 
-    # Get problem_components from crawler
+    # Get problem_description from crawler
     url = get_url_from_commit_message(PR)
     crawler = CrawlFactory.create_crawler(url)
-    problem_components = crawler.get_problem_description()
+    problem_description = crawler.get_problem_description()
 
     # Get review from query
     query = QueryFactory.create_query(MOEL_COMPANY, API_KEY)
+    problem_components = query.extract_problem_components(problem_description)
     review = query.optimize_after_review(submitted_code, problem_components, FEW_SHOT_LEARNING, ROOT_PATH)
 
     # Post review comment
