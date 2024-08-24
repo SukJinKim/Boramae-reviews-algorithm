@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 🦅 Boramae reviews algorithm
-        uses: SukJinKim/Boramae-reviews-algorithm@v5
+        uses: SukJinKim/Boramae-reviews-algorithm@v6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # 'OPENAI', 'ANTHROPIC' 둘 중 하나 선택
