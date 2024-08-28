@@ -40,11 +40,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 🦅 Boramae reviews algorithm
-        uses: SukJinKim/Boramae-reviews-algorithm@v6
+        uses: SukJinKim/Boramae-reviews-algorithm@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 'OPENAI', 'ANTHROPIC' 둘 중 하나 선택
-          model_company: ${{ secrets.MODEL_COMPANY }}
+          # "OPENAI", "ANTHROPIC" 둘 중 하나 선택
+          model_company: "ANTHROPIC"
           api_key: ${{ secrets.API_KEY }}
           # Few shot learning 적용을 원한다면 아래 주석 해제
           # few_shot_learning: "true"
