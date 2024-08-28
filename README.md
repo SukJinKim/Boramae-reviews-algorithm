@@ -4,11 +4,8 @@
 1. Boramae-reviews-algorithm bot을 실행하고 싶은 repo 홈페이지 이동
 2. 상단의 `Settings` 클릭
 3. `Security > Secrets and variables` 아래 `Actions` 클릭
-4. Change to `Variables` tab, create 2 new variable 
+4. Change to `Variables` tab, create `API_KEY` with the value of your api key 
 (For Github Action integration, set it in secrets)
-   1. `MODEL_COMPANY` with the company name of model you want to use
-   (currently, we support either `OPENAI` or `ANTHROPIC`)
-   2. `API_KEY` with the value of your api key
    
    <!-- TODO 캡쳐화면 넣기 -->
 
