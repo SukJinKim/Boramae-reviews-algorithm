@@ -6,23 +6,28 @@ from .QueryInterface import QueryInterface
 class QueryOpenAI(QueryInterface):
     def extract_problem_components(self, problem_description):
         prompt = f"""
-        The following input is a description of a programming problem. Please return a Python dictionary with the following keys:
+        The following input is a description of a programming problem. 
+        Please return a python dictionary with the following keys:
         - 'PROBLEM_DESCRIPTION'
         - 'INPUT_DESCRIPTION'
         - 'OUTPUT_DESCRIPTION'
         - 'INPUT_EXAMPLE'
         - 'OUTPUT_EXAMPLE'
 
+        Each key must have a value that is a single string.    
+
         INPUT:
-        \"\"\"{problem_description}\"\"\"
+        ```
+        {problem_description}
+        ```
 
         
         EXAMPLE:
         - INPUT:
-            \"\"\"
+            ```
             You are given an array of integers. Write a function to return the sum of the integers.Input: An array of integers.Output: A single integer, the sum of the integers.
             Example:Input: [1, 2, 3, 4]Output: 10
-            \"\"\"
+            ```
         - OUTPUT:
             {{
                 'PROBLEM_DESCRIPTION': 'You are given an array of integers. Write a function to return the sum of the integers.',
