@@ -6,30 +6,36 @@ from .QueryInterface import QueryInterface
 class QueryAnthropic(QueryInterface):
     def extract_problem_components(self, problem_description):
         prompt = f"""
-        The following input is a description of a programming problem. Please return a Python dictionary with the following keys:
+        The following input is a description of a programming problem. 
+        Please return a python dictionary with the following keys:
         - 'PROBLEM_DESCRIPTION'
         - 'INPUT_DESCRIPTION'
         - 'OUTPUT_DESCRIPTION'
         - 'INPUT_EXAMPLE'
         - 'OUTPUT_EXAMPLE'
 
-        INPUT:
-        \"\"\"{problem_description}\"\"\"
+        Each key must have a value that is a single string.
+        If the value contains a large quotation mark (`"`) or a small quotation mark (`'`), 
+        replace it with a `\"` and a `\'`, respectively, to make it an escape character.
 
+        INPUT:
+        ```
+        {problem_description}
+        ```
         
         EXAMPLE:
         - INPUT:
-            \"\"\"
+            ```
             You are given an array of integers. Write a function to return the sum of the integers.Input: An array of integers.Output: A single integer, the sum of the integers.
             Example:Input: [1, 2, 3, 4]Output: 10
-            \"\"\"
+            ```
         - OUTPUT:
             {{
-                'PROBLEM_DESCRIPTION': 'You are given an array of integers. Write a function to return the sum of the integers.',
-                'INPUT_DESCRIPTION': 'An array of integers.',
-                'OUTPUT_DESCRIPTION': 'A single integer, the sum of the integers.',
-                'INPUT_EXAMPLE': '[1, 2, 3, 4]',
-                'OUTPUT_EXAMPLE': '10'
+                'PROBLEM_DESCRIPTION': "You are given an array of integers. Write a function to return the sum of the integers.",
+                'INPUT_DESCRIPTION': "An array of integers.",
+                'OUTPUT_DESCRIPTION': "A single integer, the sum of the integers.",
+                'INPUT_EXAMPLE': "[1, 2, 3, 4]",
+                'OUTPUT_EXAMPLE': "10"
             }}
         """
         try:
@@ -43,7 +49,7 @@ class QueryAnthropic(QueryInterface):
             problem_components_str = response.content[0].text.strip()
             dict_pattern = re.compile(r'\{.*\}', re.DOTALL)
             problem_components_str = dict_pattern.search(problem_components_str).group()
-            
+
             problem_components = ast.literal_eval(problem_components_str)
 
             if not isinstance(problem_components, dict):

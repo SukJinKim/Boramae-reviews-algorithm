@@ -14,13 +14,14 @@ class QueryOpenAI(QueryInterface):
         - 'INPUT_EXAMPLE'
         - 'OUTPUT_EXAMPLE'
 
-        Each key must have a value that is a single string.    
+        Each key must have a value that is a single string.
+        If the value contains a large quotation mark (`"`) or a small quotation mark (`'`), 
+        replace it with a `\"` and a `\'`, respectively, to make it an escape character.
 
         INPUT:
         ```
         {problem_description}
         ```
-
         
         EXAMPLE:
         - INPUT:
@@ -30,11 +31,11 @@ class QueryOpenAI(QueryInterface):
             ```
         - OUTPUT:
             {{
-                'PROBLEM_DESCRIPTION': 'You are given an array of integers. Write a function to return the sum of the integers.',
-                'INPUT_DESCRIPTION': 'An array of integers.',
-                'OUTPUT_DESCRIPTION': 'A single integer, the sum of the integers.',
-                'INPUT_EXAMPLE': '[1, 2, 3, 4]',
-                'OUTPUT_EXAMPLE': '10'
+                'PROBLEM_DESCRIPTION': "You are given an array of integers. Write a function to return the sum of the integers.",
+                'INPUT_DESCRIPTION': "An array of integers.",
+                'OUTPUT_DESCRIPTION': "A single integer, the sum of the integers.",
+                'INPUT_EXAMPLE': "[1, 2, 3, 4]",
+                'OUTPUT_EXAMPLE': "10"
             }}
         """
         try:
