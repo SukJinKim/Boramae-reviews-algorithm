@@ -89,7 +89,7 @@
       1) 하나의 commit에는 반드시 하나의 제출 코드만 있어야 한다.
       2) commit message에는 반드시 알고리즘 문제 URL이 포함되어야 한다.  
       
-      - 예시 : [B.R.A demo](https://github.com/SukJinKim/Boramae-reviews-algorithm-demo/pull/2)
+      - 예시 : [B.R.A demo](https://github.com/SukJinKim/Boramae-reviews-algorithm-demo/pull/3)
 
   
 ## 3. Shout out to NAVER D2 :green_heart:
