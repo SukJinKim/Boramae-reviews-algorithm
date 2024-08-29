@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <img src="/img/Boramae-reviews-algorithm-logo.webp" width="512" height="512"/>
+  <img src="/img/Boramae-reviews-algorithm-logo.webp" width="256" height="256"/>
 </p>  
 
 
@@ -15,7 +15,8 @@
 현재 지원하고 있는 알고리즘 문제 플랫폼, 프로그래밍 언어 그리고 LLM API 기업명은 다음과 같습니다.
 
 1. 알고리즘 문제 플랫폼 : 프로그래머스, 알고스팟
-  * BOJ는 플랫폼 정책상 지원불가
+  > [!NOTE]
+  > BOJ의 경우 플랫폼 정책상 문제를 가져올 수 없어 지원이 불가능합니다.
 2. 프로그래밍 언어 : C, C++, Java, Python
 3. LLM API 기업명 : OpenAI, Anthropic
 
