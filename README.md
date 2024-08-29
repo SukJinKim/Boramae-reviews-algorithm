@@ -1,6 +1,17 @@
 # 🦅 Boramae-reviews-algorithm
 
-## Configuration
+## 1. Introduction
+![alt logo](/img/Boramae-reviews-algorithm-logo.webp)
+
+'Boramae-reviews-algorithm'(이하 B.R.A)은 사용자가 알고리즘 문제에 대한 답으로 제출한 코드를 분석하고 이를 최적화한 코드로 변환하여 제안하는 bot입니다.
+<br>
+현재 지원하고 있는 알고리즘 문제 플랫폼, 프로그래밍 언어 그리고 LLM API 기업명은 다음과 같습니다.
+
+1. 알고리즘 문제 플랫폼 : 프로그래머스, 알고스팟
+2. 프로그래밍 언어 : C, C++, Java, Python
+3. LLM API 기업명 : OpenAI, Anthropic
+
+
 1. Boramae-reviews-algorithm bot을 실행하고 싶은 repo 홈페이지 이동
 2. 상단의 `Settings` 클릭
 3. `Security > Secrets and variables` 아래 `Actions` 클릭
