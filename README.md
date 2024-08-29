@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="/img/Boramae-reviews-algorithm-logo.webp" width="512" height="512"/>
+  <a href="https://github.com/SukJinKim/Boramae-reviews-algorithm/tree/main"> 
+    <img src="/img/Boramae-reviews-algorithm-logo.webp" width="256" height="256"/>
+  </a>
 </p>  
 
 ## 1. Introduction
@@ -11,7 +13,7 @@
 현재 지원하고 있는 알고리즘 문제 플랫폼, 프로그래밍 언어 그리고 LLM API 기업명은 다음과 같습니다.
 
 1. 알고리즘 문제 플랫폼 : 프로그래머스, 알고스팟
-2. 프로그래밍 언어 : C, C++, Java, Python
+2. 프로그래밍 언어 : ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 3. LLM API 기업명 : OpenAI, Anthropic
 
 > [!WARNING]
