@@ -18,7 +18,7 @@
 > `BOJ`의 경우 플랫폼 정책상 문제를 가져올 수 없어 지원이 불가능합니다.
 2. 프로그래밍 언어 : `C`, `C++`, `Java`, `Python`
 3. LLM API 기업명 : `OpenAI`, `Anthropic`
-
+  
 
 ## 2. How to use
 
@@ -90,8 +90,8 @@
       예시 : 
       <!-- TODO 예시 PR 링크 넣기 -->
 
-
-## 3. Shout out to NAVER D2:green_heart:
+  
+## 3. Shout out to NAVER D2 :green_heart:
 
 [![NAVER D2 유튜브 영상](http://img.youtube.com/vi/7cwFhX14nkg/0.jpg)](https://youtu.be/7cwFhX14nkg?t=0s)  
 
