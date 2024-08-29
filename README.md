@@ -17,8 +17,9 @@
 1. 알고리즘 문제 플랫폼 : 프로그래머스, 알고스팟
 2. 프로그래밍 언어 : C, C++, Java, Python
 3. LLM API 기업명 : OpenAI, Anthropic
-    > [!WARNING]
-    > BOJ의 경우 플랫폼 정책상 문제를 가져올 수 없어 지원이 불가능합니다.
+
+> [!WARNING]
+> BOJ의 경우 플랫폼 정책상 문제를 가져올 수 없어 지원이 불가능합니다.
 
 ## 2. How to use
 
