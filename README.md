@@ -3,7 +3,7 @@
 ## 1. Introduction
 <p align="center">
   <img src="/img/Boramae-reviews-algorithm-logo.webp" width="512" height="512"/>
-</p>
+</p>  
 
 `Boramae-reviews-algorithm (이하 B.R.A)`은 사용자가 알고리즘 문제에 대한 답으로 제출한 코드를 분석하고 이를 최적화한 코드로 변환하여 제안하는 bot입니다.  
 
