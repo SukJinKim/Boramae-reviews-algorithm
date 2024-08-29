@@ -13,11 +13,12 @@
 현재 지원하고 있는 알고리즘 문제 플랫폼, 프로그래밍 언어 그리고 LLM API 기업명은 다음과 같습니다.
 
 1. 알고리즘 문제 플랫폼 : 프로그래머스, 알고스팟
-2. 프로그래밍 언어 : ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-3. LLM API 기업명 : OpenAI, Anthropic
-
 > [!WARNING]
 > BOJ의 경우 플랫폼 정책상 문제를 가져올 수 없어 지원이 불가능합니다.
+2. 프로그래밍 언어 : C, C++, Java, Python
+3. LLM API 기업명 : OpenAI, Anthropic
+
+
 
 ## 2. How to use
 
