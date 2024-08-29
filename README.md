@@ -39,8 +39,8 @@
 
 2. Usage
    1) workflow 설정
-      B.R.A. bot을 실행하고 싶은 repo에 `.github/workflows/code_review.yml`을 아래와 같이 생성합니다.  
-      이때 사용자는 원하는대로 LLM API 기업명`(model_company)`와 few-shot learning 적용여부`(few_shot_learning)`을 customize할 수 있습니다.  
+       B.R.A. bot을 실행하고 싶은 repo에 `.github/workflows/code_review.yml`을 아래와 같이 생성합니다.  
+       이때 사용자는 원하는대로 LLM API 기업명`(model_company)`와 few-shot learning 적용여부`(few_shot_learning)`을 customize할 수 있습니다.  
       <!-- TODO technical report 추가 -->
 
       ```yml
@@ -85,10 +85,11 @@
       ```
       B.R.A는 사용자가 Github repo에 PR을 create하거나 update하면 자동으로 동작하여 리뷰를 남깁니다.  
       이때 반드시 아래 두 가지 조건을 만족해야 합니다.  
+
       1) 하나의 commit에는 반드시 하나의 제출 코드만 있어야 한다.
-      2) commit message에는 반드시 알고리즘 문제 URL이 포함되어야 한다.
-      예시 : 
-      <!-- TODO 예시 PR 링크 넣기 -->
+      2) commit message에는 반드시 알고리즘 문제 URL이 포함되어야 한다.  
+      
+      - 예시 : https://github.com/SukJinKim/Boramae-reviews-algorithm-demo/pull/1
 
   
 ## 3. Shout out to NAVER D2 :green_heart:
