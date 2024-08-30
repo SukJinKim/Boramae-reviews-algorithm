@@ -19,7 +19,7 @@ B.R.A는 정답 코드에 대해 가독성과 성능 면에서 최적화된 코�
 
 <br/>
 
-## 2. Supported Enviroments
+## 2. Supported Environments
 
 
 현재 B.R.A. 지원하고 있는 알고리즘 문제 플랫폼, 프로그래밍 언어 그리고 LLM API 제공업체는 다음과 같습니다.
