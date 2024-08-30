@@ -35,7 +35,7 @@ B.R.A는 정답 코드에 대해 가독성과 성능 면에서 최적화된 코�
 ## 3. How to use
 
 
-1. Github secret 설정
+1. Github secret 설정<br/> 
    B.R.A는 보안을 위해 Github secret에 저장된 사용자 API 키를 사용합니다.  
    이를 위해 다음과 같은 절차를 따라주시길 바랍니다.  
 
@@ -52,8 +52,11 @@ B.R.A는 정답 코드에 대해 가독성과 성능 면에서 최적화된 코�
 <br/>
 
 2. workflow 생성
+  
+   <br/> 
    B.R.A. bot을 실행하고 싶은 repo에 `.github/workflows/code_review.yml`을 아래와 같이 생성합니다.  
    이때 사용자는 원하는대로 LLM API 기업명`(model_company)`와 few-shot learning 적용여부`(few_shot_learning)`을 customize할 수 있습니다.
+
    <br/>
    최적의 설정값에 대한 실험 결과 `model_company : "ANTHROPIC"`, `few_shot_learning: "true"`로 설정하는 것이 가장 성능이 우수했습니다.
    자세한 내용은 [실험 보고서](https://magnificent-climb-bc3.notion.site/Boramae-reviews-algorithm-9bc1db970a9b4043a7919bae47e4a017?pvs=4)를 참고하시길 바랍니다.
