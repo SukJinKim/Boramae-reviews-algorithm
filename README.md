@@ -107,7 +107,7 @@ B.R.A는 정답 코드에 대해 가독성과 성능 면에서 최적화된 코�
    1) 하나의 commit에는 반드시 하나의 제출 코드만 있어야 한다.
    2) commit message에는 반드시 알고리즘 문제 URL이 포함되어야 한다.  
       
-   -  참고 : [B.R.A demo](https://github.com/SukJinKim/Boramae-reviews-algorithm-demo/pull/3)
+   -  참고 : SukJinKim/Boramae-reviews-algorithm-demo#3
 
 <br/>  
 
