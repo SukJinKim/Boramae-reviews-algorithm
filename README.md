@@ -44,6 +44,18 @@ B.R.A의 주요 기능은 다음과 같습니다.
 > B.R.A.는 각 업체별 최신 LLM을 사용합니다.  
 > 버전별 LLM 정보는 아래를 참고하시기 바랍니다.
 
+<details>
+
+<summary>버전별 LLM 정보</summary>
+
+## v1
+
+    | 업체명 | 모델명 |
+    | --- | --- |
+    | `OpenAI` | *gpt-4o* |
+    | `Anthropic` | *claude-3-5-sonnet-20240620* |
+
+</details>
 
  <br/> 
 
