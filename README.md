@@ -50,10 +50,10 @@ B.R.A의 주요 기능은 다음과 같습니다.
 
 ## v1
 
-    | 업체명 | 모델명 |
-    | --- | --- |
-    | `OpenAI` | *gpt-4o* |
-    | `Anthropic` | *claude-3-5-sonnet-20240620* |
+  | 업체명 | 모델명 |
+  | --- | --- |
+  | `OpenAI` | *gpt-4o* |
+  | `Anthropic` | *claude-3-5-sonnet-20240620* |
 
 </details>
 
