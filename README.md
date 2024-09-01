@@ -42,7 +42,6 @@ B.R.A의 주요 기능은 다음과 같습니다.
 3. LLM API 제공업체 : `OpenAI`, `Anthropic`
 > [!NOTE]
 > B.R.A.는 각 업체별 최신 LLM을 사용합니다.  
-
 > 버전별 LLM 정보는 아래를 참고하시기 바랍니다.
 
 
