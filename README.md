@@ -88,6 +88,10 @@ B.R.A의 주요 기능은 다음과 같습니다.
     <img src="/img/secret setting.png"/>
    </p>  
 
+   <p align="center">
+    <img src="/img/secret setting2.png"/>
+   </p>  
+
 <br/>
 
 2. workflow 생성  
@@ -137,10 +141,10 @@ B.R.A의 주요 기능은 다음과 같습니다.
 3. Create/Update PR
    ```mermaid
     flowchart LR;
-    U[User] -- 1. Create/Update PR --> G[(Github repo)] -- 2. Trigger --> B([B.R.A]);
+    U[User] -- 1. Create/Update PR --> G[(Github repo)] -- 2. Trigger --> B([B.R.A.]);
     B -- 3. Review --> G;
    ```
-   B.R.A는 사용자가 Github repo에 PR을 create하거나 update하면 자동으로 동작하여 리뷰를 남깁니다.  
+   B.R.A.는 사용자가 Github repo에 PR을 create하거나 update하면 자동으로 동작하여 리뷰를 남깁니다.  
    이때 반드시 아래 두 가지 조건을 만족해야 합니다.  
 
    1) **하나의 commit에는 반드시 하나의 제출 코드만 있어야 한다.**
