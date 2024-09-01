@@ -8,7 +8,7 @@
 ## 1. Introduction
 
 
-`Boramae-reviews-algorithm (이하 B.R.A)`은 LLM을 이용하여 코테용 코드를 리뷰하는 bot입니다.  
+`:eagle: Boramae-reviews-algorithm (이하 B.R.A)`은 LLM을 이용하여 코테용 코드를 리뷰하는 bot입니다.  
 B.R.A는 정답 코드에 대해 가독성과 성능 면에서 최적화된 코드를 제안할 뿐만 아니라, 오답 코드에 대해서도 정답 코드로 수정할 수 있는 개선 방안을 제시합니다.  
 만약 당신이 아래 각 호에 하나라도 해당하면, 저희가 만든 bot이 분명 도움이 될 것이라 확신합니다.
 
