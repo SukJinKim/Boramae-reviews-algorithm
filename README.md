@@ -65,10 +65,11 @@ B.R.A의 주요 기능은 다음과 같습니다.
 0. Prerequisites<br/>
    B.R.A.를 실행하기 위해서는 아래 2가지가 필요합니다.
    
-  1) 코테에 제출한 코드를 저장할 github repositroy 생성
+   1) 코테에 제출한 코드를 저장할 github repositroy 생성
 > [!NOTE]
-> B.R.A.는 github action이기 때문에 반드시 필요합니다.
-  2) LLM API 키
+> B.R.A.는 github action이기 때문에 반드시 필요합니다.  
+
+   2) LLM API 키
 > [!TIP]
 > `OpenAI`혹은 `Anthropic`의 API 키가 필요합니다.  
 > 저희는 `Anthropic`사의 API 키를 발급받으시길 추천드립니다.  
