@@ -68,7 +68,7 @@ B.R.A의 주요 기능은 다음과 같습니다.
    1) 코테에 제출한 코드를 저장할 github repositroy 생성
    2) LLM API 키 발급
 > [!TIP]
-> `OpenAI`혹은 `Anthropic`의 API 키가 필요합니다.  
+> `OpenAI`혹은 `Anthropic`사의 API 키가 필요합니다.  
 > 저희는 `Anthropic`사의 API 키를 발급받으시길 추천드립니다.  
 > 자세한 내용은 아래 `2. workflow 생성`을 참고하시기 바랍니다.
 
@@ -92,7 +92,7 @@ B.R.A의 주요 기능은 다음과 같습니다.
 
 2. workflow 생성  
    B.R.A. bot을 실행하고 싶은 repo에 `.github/workflows/code_review.yml`을 아래와 같이 생성합니다.  
-   이때 사용자는 원하는대로 LLM API 기업명`(model_company)`와 few-shot learning 적용여부`(few_shot_learning)`을 customize할 수 있습니다.
+   이때 사용자는 원하는대로 LLM API 제공업체명`(model_company)`와 few-shot learning 적용여부`(few_shot_learning)`을 customize할 수 있습니다.
 
 
    최적의 설정값에 대한 실험 결과 `model_company : "ANTHROPIC"`, `few_shot_learning: "true"`로 설정하는 것이 가장 성능이 우수했습니다.
@@ -143,8 +143,8 @@ B.R.A의 주요 기능은 다음과 같습니다.
    B.R.A는 사용자가 Github repo에 PR을 create하거나 update하면 자동으로 동작하여 리뷰를 남깁니다.  
    이때 반드시 아래 두 가지 조건을 만족해야 합니다.  
 
-   1) 하나의 commit에는 반드시 하나의 제출 코드만 있어야 한다.
-   2) commit message에는 반드시 알고리즘 문제 URL이 포함되어야 한다.  
+   1) **하나의 commit에는 반드시 하나의 제출 코드만 있어야 한다.**
+   2) **commit message에는 반드시 알고리즘 문제 URL이 포함되어야 한다.**  
       
    -  참고 : SukJinKim/Boramae-reviews-algorithm-demo#3
 
