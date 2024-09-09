@@ -73,9 +73,7 @@ B.R.A의 주요 기능은 다음과 같습니다.
    1) 코테에 제출한 코드를 저장할 github repositroy 생성
    2) LLM API 키 발급
 > [!IMPORTANT]
-> 사용자는 반드시 `OpenAI`혹은 `Anthropic`사의 API 키를 발급받아야 합니다.
-> [OpenAI API 키 발급](https://platform.openai.com/docs/overview)
-> [Anthropic API 키 발급](https://console.anthropic.com/dashboard)
+> 사용자는 반드시 [OpenAI](https://platform.openai.com/docs/overview) 혹은 [Anthropic](https://console.anthropic.com/dashboard)사의 API 키를 발급받아야 합니다.
 
 <br/>
 
