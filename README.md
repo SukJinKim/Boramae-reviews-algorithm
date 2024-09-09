@@ -141,12 +141,14 @@ B.R.A의 주요 기능은 다음과 같습니다.
 
 <br/>
 
-3. Create/Update PR
+3. Create/Update PR(Pull Request)
    ```mermaid
     flowchart LR;
     U[User] -- 1.Create/Update PR --> G[(Github repo)] -- 2.Trigger --> B([B.R.A.]);
     B -- 3.Review --> G;
    ```
+   - PR을 create하는 방법은 [링크](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) 참고해주시기 바랍니다. 
+
    B.R.A.는 사용자가 Github repo에 PR을 create하거나 update하면 자동으로 동작하여 리뷰를 남깁니다.  
    이때 반드시 아래 두 가지 조건을 만족해야 합니다.  
 
