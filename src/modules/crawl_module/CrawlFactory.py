@@ -1,5 +1,6 @@
 from urllib.parse import urlparse
-from .CrawlLeetcode import CrawlLeetcode
+from .CrawlLeetcode import CrawlLeetCode
+from .CrawlBaekjoon import CrawlBaekjoon
 from .CrawlProgrammers import CrawlProgrammers
 from .CrawlAlgospot import CrawlAlgospot
 
@@ -13,6 +14,8 @@ class CrawlFactory:
         elif domain == 'algospot.com':
             return CrawlAlgospot(url)
         elif domain == 'leetcode.com':
-            return CrawlLeetcode(url)
+            return CrawlLeetCode(url)
+        elif domain == 'acmicpc.net':
+            return CrawlBaekjoon(url)
         else:
             raise ValueError("ERR_UNSUPPORTED_URL : 지원하는 사이트의 URL이 아닙니다.")

@@ -2,38 +2,41 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import re
+import html
 
 def clean_html(raw_html):
-    # Remove HTML tags
+    # HTML tag 제거
     cleanr = re.compile('<.*?>')
     cleantext = re.sub(cleanr, '', raw_html)
-    # Replace HTML entities
-    cleantext = re.sub('&nbsp;', ' ', cleantext)
-    cleantext = re.sub('&quot;', '"', cleantext)
-    cleantext = re.sub('&lt;', '<', cleantext)
-    cleantext = re.sub('&gt;', '>', cleantext)
-    # Remove extra whitespace
+    
+    # HTML 엔티티를 일반 문자로 변환
+    cleantext = html.unescape(cleantext)
+    
+    # 연속된 공백 제거 및 줄바꿈 처리
     cleantext = re.sub(r'\s+', ' ', cleantext).strip()
+    cleantext = re.sub(r'\n\s*\n', '\n\n', cleantext)
+    
     return cleantext
 
 def extract_leetcode_problem_description(problem_url):
-    # Extract the titleSlug from the URL
-    title_slug = problem_url.split('/')[-2]
+    # url에서 title 추출(description으로 끝나는 경우도 처리)
+    title_slug = problem_url.rstrip('/').split('/')[-1]
+    if title_slug == 'description':
+        title_slug = problem_url.rstrip('/').split('/')[-2]
     
-    # Construct the API URL
+    # API URL 생성
     api_url = f"https://alfa-leetcode-api.onrender.com/select?titleSlug={title_slug}"
     
     try:
-        # Make the API request
+        # API request 요청
         response = requests.get(api_url)
-        response.raise_for_status()  # Raise an exception for bad responses
+        response.raise_for_status()
         data = response.json()
         
         # Extract the question content
         question_content = data['question']
         
-        # Clean the HTML co
-        # ntent
+        # Clean the HTML content
         clean_description = clean_html(question_content)
         
         return clean_description

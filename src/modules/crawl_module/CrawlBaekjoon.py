@@ -4,7 +4,10 @@ from .CrawlInterface import CrawlInterface
 
 class CrawlBaekjoon(CrawlInterface):
     def get_problem_description(self):
-        response = requests.get(self.url)
+        headers = {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        response = requests.get(self.url, headers=headers)
 
         if response.status_code != 200:
             raise ValueError(f"ERR_CRAWLING_ALGOSPOT: {self.url}과의 연결이 원할하지 않습니다.")
@@ -12,25 +15,40 @@ class CrawlBaekjoon(CrawlInterface):
         # HTML 파싱
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # 문제 정보의 각 섹션을 선택할 CSS 셀렉터들
-        problem_section_selectors = [
-            "section.problem_info",
-            "section.problem_statement",
-            "section.problem_input",
-            "section.problem_output",
-            "section.problem_sample_input",
-            "section.problem_sample_output"
-        ]
+        # PROBLEM_DESCRIPTION 찾기
+        description_element = soup.find('div', id='problem_description')
+        problem_description = description_element.text.strip() if description_element else 'Proplem description not found'
 
-        problem_details = []
-        for selector in problem_section_selectors:
-            element = soup.select_one(selector)
-            if element:
-                problem_details.append(element.get_text(strip=True))
+        # INPUT_DESCRIPTION 찾기
+        input_element = soup.find('div', id='problem_input')
+        input_description = input_element.text.strip() if input_element else 'Input description not found'
+
+        # OUTPUT_DESCRIPTIO 찾기
+        output_element = soup.find('div', id='problem_output')
+        output_description = output_element.text.strip() if output_element else 'Output description not found'
+
+        # INPUT_EXAMPLE 찾기
+        input_example_element = soup.find('pre', id='sample-input-1')
+        input_example = input_example_element.text.strip() if input_example_element else 'Input example not found'
+
+        # OUTPUT_EXAMPLE 찾기
+        output_example_element = soup.find('pre', id='sample-output-1')
+        output_example = output_example_element.text.strip() if output_example_element else 'Output example not found'
         
-        if problem_details:
-            problem_description = "\n".join(problem_details)
-        else:
-            raise ValueError("ERR_CRAWLING_ALGOSPOT: 문제 정보를 찾을 수 없습니다.")
-        
-        return problem_description
+        # 모든 정보를 하나의 문자열로 결합
+        combined_text = f"""PROBLEM_DESCRIPTION:
+        {problem_description}
+
+        INPUT_DESCRIPTION:
+        {input_description}
+
+        OUTPUT_DESCRIPTION:
+        {output_description}
+
+        INPUT_EXAMPLE:
+        {input_example}
+
+        OUTPUT_EXAMPLE:
+        {output_example}"""
+
+        return combined_text
